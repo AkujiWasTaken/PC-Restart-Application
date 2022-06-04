@@ -15,7 +15,7 @@ def shutdown_countdown_function(time_to_shutdown):
             time.sleep(1)
             time_to_shutdown -= 1
             
-            if time_to_shutdown == 3: #300 5 minutes in seconds
+            if time_to_shutdown == 300: #300 5 minutes in seconds
                 #create an object to the ToastNotifier class
                 notifier = ToastNotifier()
                 notifier.show_toast("Shutdown Reminder:", "5 minutes until shutdown!", duration=10, icon_path='./restart_icon.ico')
@@ -58,7 +58,7 @@ def shutdown_options():
     else:
         print("Invalid Choice...")
         
-time_to_shutdown = 6 #28500 7 1/2 hours in seconds
+time_to_shutdown = 28500 #28500 7 1/2 hours in seconds
 
 if __name__ == '__main__':
     shutdown_countdown_function(int(time_to_shutdown))
